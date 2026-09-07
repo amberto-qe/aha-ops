@@ -1,6 +1,6 @@
 const CRON_SECRET = Deno.env.get("CRON_SECRET") ?? "";
 const GITHUB_TOKEN = Deno.env.get("GITHUB_TOKEN") ?? "";
-const GITHUB_REPO = Deno.env.get("GITHUB_REPO") ?? "ahapeter/aha-ops";
+const GITHUB_REPO = Deno.env.get("GITHUB_REPO") ?? "amberto-qe/aha-ops";
 const WORKFLOW_FILE = Deno.env.get("WORKFLOW_FILE") ?? "patrol-run.yml";
 const BRANCH = Deno.env.get("BRANCH") ?? "main";
 

@@ -42,7 +42,7 @@ jobs:
         continue-on-error: true
         run: |
           mkdir -p data
-          oras pull ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.SQLITE_PKG }}:latest \
+          oras pull ${{ env.REGISTRY }}/ahapeter/${{ env.SQLITE_PKG }}:latest \
             --output data/ 2>/dev/null || echo "No previous sqlite found, starting fresh"
 
       - name: Run patrol
@@ -66,5 +66,5 @@ jobs:
         run: |
           cd data
           echo "${{ secrets.GHCR_TOKEN }}" | oras login ${{ env.REGISTRY }} -u ${{ github.actor }} --password-stdin
-          oras push ${{ env.REGISTRY }}/${{ github.repository_owner }}/${{ env.SQLITE_PKG }}:latest \
+          oras push ${{ env.REGISTRY }}/ahapeter/${{ env.SQLITE_PKG }}:latest \
             ${{ env.SQLITE_FILE }}:application/octet-stream

@@ -1,5 +1,8 @@
 # aha-ops
 
+> Relocated from `ahapeter/aha-ops` — public so scheduled Actions minutes stay free.
+> The patrol image and the `patrol-results` SQLite package still live under the `ahapeter` GHCR namespace.
+
 Patrol cron trigger — calls a GitHub Actions workflow every 5 minutes.
 
 ## Architecture
